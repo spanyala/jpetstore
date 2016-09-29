@@ -1,3 +1,3 @@
 # JPetstore
-Sample J2EE application used for demo purposes.  Test
+Sample J2EE application used for demo purposes. 
 
