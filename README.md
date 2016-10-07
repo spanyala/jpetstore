@@ -1,4 +1,4 @@
 # JPetstore
 Sample J2EE application used for demo purposes. 
-Test 9 - Selenium
+Test 10 - Selenium
 
