@@ -1,52 +1,42 @@
 package selenium.video.recording;
 
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import atu.testrecorder.ATUTestRecorder;
 
-public class VerifyProductChrome {
+public class VerifyBirdsLink {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   private VideoRecord recorder;
-
   @Before
   public void setUp() throws Exception {
-	
-	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
-    driver = new ChromeDriver();
-    baseUrl = "http://54.152.107.21:9090//jpetstore/actions/Account.action?signonForm=";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  System.setProperty("webdriver.ie.driver", "driver\\IEDriverServer.exe");
+		
+	    driver = new InternetExplorerDriver();
+	    baseUrl = "http://54.152.107.21:9090/";
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testUnit() throws Exception {
+  public void testVerifyBirdsLink() throws Exception {
 		 recorder=new VideoRecord();
-	 recorder.startRecording();	
+		 recorder.startRecording();	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
     Thread.sleep(2000);
-    driver.findElement(By.cssSelector("#SidebarContent > a > img")).click();
-    Thread.sleep(2000);
-    driver.findElement(By.linkText("FI-FW-01")).click(); 
-    Thread.sleep(2000);
-    driver.findElement(By.linkText("Add to Cart")).click();
-    Thread.sleep(2000);
-    driver.findElement(By.linkText("Proceed to Checkout")).click();  
-    Thread.sleep(2000);
-    driver.findElement(By.name("newOrder")).click();   
-    Thread.sleep(2000);
-    driver.findElement(By.linkText("Confirm")).click();
+    driver.findElement(By.xpath("//div[@id='SidebarContent']/a[5]/img")).click();
     Thread.sleep(2000);
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
