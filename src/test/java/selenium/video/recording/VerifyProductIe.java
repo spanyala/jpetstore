@@ -23,7 +23,8 @@ public class VerifyProductIe {
 	  System.setProperty("webdriver.ie.driver", "driver\\IEDriverServer.exe");
 		
     driver = new InternetExplorerDriver();
-    baseUrl = "http://54.152.107.21:9090/";
+    baseUrl = "http://54.152.107.21:9090/jpetstore/actions/Account.action?signonForm=");
+   ";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
