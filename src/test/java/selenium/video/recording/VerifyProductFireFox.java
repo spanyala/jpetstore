@@ -9,14 +9,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import atu.testrecorder.ATUTestRecorder;
+
 
 public class VerifyProductFireFox {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  private ATUTestRecorder recorder;
+  private VideoRecord recorder;
 
   @Before
   public void setUp() throws Exception {
@@ -29,8 +29,8 @@ public class VerifyProductFireFox {
 
   @Test
   public void testUnit() throws Exception {
-	 recorder=new ATUTestRecorder("seleniumRecording\\","FirefoxRecording",false);
-	 recorder.start();	
+	 recorder=new VideoRecord();
+   recorder.startRecording();	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
@@ -49,7 +49,8 @@ public class VerifyProductFireFox {
     Thread.sleep(2000);
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
-    recorder.stop();
+    recorder.stopRecording();
+    
   }
 
   @After

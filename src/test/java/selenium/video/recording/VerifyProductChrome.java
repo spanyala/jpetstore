@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import atu.testrecorder.ATUTestRecorder;
+
 
 public class VerifyProductChrome {
   private WebDriver driver;

@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import atu.testrecorder.ATUTestRecorder;
+
 
 public class VerifyDogsLink {
   private WebDriver driver;
