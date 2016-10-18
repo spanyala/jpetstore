@@ -164,9 +164,12 @@
            <artifactId>cobertura-maven-plugin</artifactId>
            <version>2.6</version>
            <configuration>
-               <formats>
-                   <format>xml</format>
-               </formats>
+<!--                <formats> -->
+<!--                    <format>xml</format> -->
+<!--                </formats> -->
+			 <includes>
+			     <include>**/IntegrationSuite.java</include>
+			</includes>
            </configuration>
         </plugin>
 		</plugins>
