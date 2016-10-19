@@ -51,11 +51,12 @@ public class VerifyProductChrome {
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
     recorder.stopRecording();
+    driver.quit();
   }
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
+  
    
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
