@@ -33,29 +33,30 @@ public class VerifyProductChrome {
 		 recorder=new VideoRecord();
 	 recorder.startRecording();	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
-    //Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.cssSelector("#SidebarContent > a > img")).click();
-    //Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.linkText("FI-FW-01")).click(); 
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.linkText("Add to Cart")).click();
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.linkText("Proceed to Checkout")).click();  
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.name("newOrder")).click();   
-    //Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.linkText("Confirm")).click();
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     driver.findElement(By.linkText("Sign Out")).click();
-   // Thread.sleep(2000);
+    Thread.sleep(2000);
     recorder.stopRecording();
+    driver.quit();
   }
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
+ 
    
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
