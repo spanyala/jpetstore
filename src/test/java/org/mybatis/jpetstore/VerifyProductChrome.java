@@ -6,12 +6,13 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
 
-public class VerifyProductFireFox {
+public class VerifyProductChrome {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -20,18 +21,17 @@ public class VerifyProductFireFox {
 
   @Before
   public void setUp() throws Exception {
-	  System.setProperty("webdriver.gecko.driver","driver\\geckodriver.exe");
-		
-    driver = new FirefoxDriver();
+	
+	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
+    driver = new ChromeDriver();
     baseUrl = "http://54.152.107.21:9090";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testUnit() throws Exception {
-	 recorder=new VideoRecord();
-	 
-   recorder.startRecording();	
+		 recorder=new VideoRecord();
+	 recorder.startRecording();	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
@@ -51,12 +51,12 @@ public class VerifyProductFireFox {
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
     recorder.stopRecording();
-    driver.quit();
   }
 
   @After
   public void tearDown() throws Exception {
-   // driver.quit();
+    driver.quit();
+   
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
