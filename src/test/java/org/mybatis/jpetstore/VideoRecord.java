@@ -15,7 +15,7 @@ public class VideoRecord {
  
        public void startRecording() throws Exception
        {    
-              File file = new File("seleniumRecording\\");
+              File file = new File("test-results\\");
                             
               Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
               int width = screenSize.width;
