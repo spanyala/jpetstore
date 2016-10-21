@@ -33,8 +33,8 @@ public class VerifyProductChrome {
   public void testUnit() throws Exception {
 	  Class<?> enclosingClass = getClass().getEnclosingClass();
 	   String className=enclosingClass.getName();
-		 recorder=new VideoRecord(className);
-	 recorder.startRecording();	
+		 recorder=new VideoRecord();
+	 recorder.startRecording(className);	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
