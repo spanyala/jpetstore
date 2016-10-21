@@ -15,7 +15,15 @@ public class VideoRecord {
  
        public void startRecording() throws Exception
        {    
-              File file = new File("test-results\\");
+    	   File dir=new File("target\\surefire-reports\\VerifyProductChrome");
+    	   if (!dir.exists()) {
+    	       dir.mkdir();
+    	   }
+    	   
+    	   
+    	   
+    	   
+    	   File file = new File("target\\surefire-reports\\VerifyProductChrome\\");
                             
               Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
               int width = screenSize.width;
