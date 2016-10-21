@@ -48,7 +48,7 @@ public class VerifyProductChrome {
     Thread.sleep(2000);
     driver.findElement(By.linkText("Confirm")).click();
     Thread.sleep(2000);
-    driver.findElement(By.linkText("Sign Out")).click();
+    driver.findElement(By.linkText("Sign Outt")).click();
     Thread.sleep(2000);
     recorder.stopRecording();
     
