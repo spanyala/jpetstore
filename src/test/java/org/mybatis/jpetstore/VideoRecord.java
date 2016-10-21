@@ -10,12 +10,12 @@ import static org.monte.media.VideoFormatKeys.*;
 public class VideoRecord {
     private ScreenRecorder screenRecorder;
   
-
+     
   
  
        public void startRecording() throws Exception
        {    
-              File file = new File("target\\surefire-reports");
+              File file = new File("test-results\\");
                             
               Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
               int width = screenSize.width;
