@@ -15,7 +15,7 @@ public class VideoRecord {
  
        public void startRecording(String className) throws Exception
        {    
-    	   File dir=new File("target\\surefire-reports\\org.mybatis.jpetstore."+className);
+    	   File dir=new File("target\\surefire-reports\\"+className);
     	   if (!dir.exists()) {
     	       dir.mkdir();
     	   }
@@ -23,7 +23,7 @@ public class VideoRecord {
     	   
     	   
     	   
-    	   File file = new File("target\\surefire-reports\\org.mybatis.jpetstore.className\\");                  
+    	   File file = new File("target\\surefire-reports\\"+className+"\\");                  
               Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
               int width = screenSize.width;
               int height = screenSize.height;
