@@ -13,9 +13,9 @@ public class VideoRecord {
      
   
  
-       public void startRecording() throws Exception
+       public void startRecording(String className) throws Exception
        {    
-    	   File dir=new File("target\\surefire-reports\\org.mybatis.jpetstore.VerifyProductChrome");
+    	   File dir=new File("target\\surefire-reports\\org.mybatis.jpetstore."+className);
     	   if (!dir.exists()) {
     	       dir.mkdir();
     	   }
@@ -23,7 +23,7 @@ public class VideoRecord {
     	   
     	   
     	   
-    	   File file = new File("target\\surefire-reports\\org.mybatis.jpetstore.VerifyProductChrome\\");                  
+    	   File file = new File("target\\surefire-reports\\org.mybatis.jpetstore.className\\");                  
               Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
               int width = screenSize.width;
               int height = screenSize.height;
@@ -44,7 +44,7 @@ public class VideoRecord {
                     KeyFrameIntervalKey, 15 * 60),
                new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
                     FrameRateKey, Rational.valueOf(30)),
-               null, file, "MyVideo");
+               null, file, className);
           this.screenRecorder.start();
        
        }

@@ -31,7 +31,9 @@ public class VerifyProductChrome {
 
   @Test
   public void testUnit() throws Exception {
-		 recorder=new VideoRecord();
+	  Class<?> enclosingClass = getClass().getEnclosingClass();
+	   String className=enclosingClass.getName();
+		 recorder=new VideoRecord(className);
 	 recorder.startRecording();	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
