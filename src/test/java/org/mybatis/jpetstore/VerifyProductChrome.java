@@ -27,16 +27,13 @@ public class VerifyProductChrome {
     driver = new ChromeDriver();
     baseUrl = "http://54.152.107.21:9090";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    String className = this.getClass().getName();
-	 recorder=new VideoRecord();
-     recorder.startRecording(className);
   }
 
   @Test
   public void testUnit() throws Exception {
-	  //String className = this.getClass().getName();
-		// recorder=new VideoRecord();
-	// recorder.startRecording(className);	
+	  String className = this.getClass().getName();
+		 recorder=new VideoRecord();
+	 recorder.startRecording(className);	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
@@ -55,14 +52,14 @@ public class VerifyProductChrome {
     Thread.sleep(2000);
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
-   // recorder.stopRecording();
+    recorder.stopRecording();
     
   }
 
   @After
   public void tearDown() throws Exception {
 	  driver.quit();
-	  recorder.stopRecording();
+   
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
