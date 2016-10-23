@@ -25,7 +25,7 @@
 		</releases>
 	</repository>
 </repositories> -->
-	<pluginRepositories>
+	<!-- <pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
 			<url>http://172.31.62.85:8081/artifactory/repo</url>
@@ -40,7 +40,7 @@
 				<enabled>false</enabled>
 			</releases>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories> -->
 
 	<dependencies>
 
