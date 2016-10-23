@@ -9,7 +9,7 @@
 	<name>JPetStore Demo 6</name>
 	<url>http://www.mybatis.org</url>
 
-	<!-- <repositories>
+	<repositories>
 	<repository>
 		<id>central</id>
 		<url>http://172.31.62.85:8081/artifactory/repo</url>
@@ -24,8 +24,8 @@
 			<enabled>false</enabled>
 		</releases>
 	</repository>
-</repositories> -->
-	<!-- <pluginRepositories>
+</repositories>
+	<pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
 			<url>http://172.31.62.85:8081/artifactory/repo</url>
@@ -40,7 +40,7 @@
 				<enabled>false</enabled>
 			</releases>
 		</pluginRepository>
-	</pluginRepositories> -->
+	</pluginRepositories>
 
 	<dependencies>
 
