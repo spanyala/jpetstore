@@ -1,7 +1,10 @@
 package org.mybatis.jpetstore;
 
 import java.util.regex.Pattern;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -13,11 +16,10 @@ import org.openqa.selenium.support.ui.Select;
 
 
 public class VerifyProductChrome {
-  private WebDriver driver =null;
+  private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  
   private VideoRecord recorder;
 
   @Before
@@ -32,6 +34,7 @@ public class VerifyProductChrome {
   @Test
   public void testUnit() throws Exception {
 	  String className = this.getClass().getName();
+	  
 		 recorder=new VideoRecord();
 	 recorder.startRecording(className);	
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
@@ -40,6 +43,19 @@ public class VerifyProductChrome {
     Thread.sleep(2000);
     driver.findElement(By.cssSelector("#SidebarContent > a > img")).click();
     Thread.sleep(2000);
+   
+    
+    WebElement element=driver.findElement(By.linkText("FI-FW-01")); 
+    String str=element.getText();
+     if (str.equals("FI-FW-01")){
+    	 
+    	 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    	// File dir=new File("target\\surefire-reports\\"+className);
+    	FileUtils.copyFile(scrFile, new File("target\\surefire-reports\\"+className+"\\"+className+".png"));
+     }
+	   
+   
+    
     driver.findElement(By.linkText("FI-FW-01")).click(); 
     Thread.sleep(2000);
     driver.findElement(By.linkText("Add to Cart")).click();
@@ -53,7 +69,7 @@ public class VerifyProductChrome {
     driver.findElement(By.linkText("Sign Out")).click();
     Thread.sleep(2000);
     recorder.stopRecording();
-    
+   
   }
 
   @After
