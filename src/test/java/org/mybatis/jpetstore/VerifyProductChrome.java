@@ -37,6 +37,7 @@ public class VerifyProductChrome {
 	  
 		 recorder=new VideoRecord();
 	 recorder.startRecording(className);	
+	 driver.manage().window().maximize();
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
     driver.findElement(By.name("signon")).click();
