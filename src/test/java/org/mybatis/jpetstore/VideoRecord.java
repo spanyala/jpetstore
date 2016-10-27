@@ -32,12 +32,12 @@ public class VideoRecord {
               
              
                              
-           // GraphicsConfiguration gc = GraphicsEnvironment
-               //.getLocalGraphicsEnvironment()
-              // .getDefaultScreenDevice()
-               //.getDefaultConfiguration();
+            GraphicsConfiguration gc = GraphicsEnvironment
+               .getLocalGraphicsEnvironment()
+               .getDefaultScreenDevice()
+               .getDefaultConfiguration();
  
-           this.screenRecorder = new SpecializedScreenRecorder(null, captureSize,
+           this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
                new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
                new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
                     CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
