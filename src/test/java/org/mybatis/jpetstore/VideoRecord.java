@@ -29,13 +29,15 @@ public class VideoRecord {
               int height = screenSize.height;
                              
               Rectangle captureSize = new Rectangle(0,0, width, height);
+              
+             
                              
             GraphicsConfiguration gc = GraphicsEnvironment
                .getLocalGraphicsEnvironment()
                .getDefaultScreenDevice()
                .getDefaultConfiguration();
  
-           this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
+           this.screenRecorder = new SpecializedScreenRecorder(null, captureSize,
                new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
                new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
                     CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
