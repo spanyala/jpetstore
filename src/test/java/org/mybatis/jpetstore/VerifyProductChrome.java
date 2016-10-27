@@ -50,6 +50,7 @@ public class VerifyProductChrome {
     WebElement element=driver.findElement(By.linkText("FI-FW-01")); 
     String str=element.getText();
      if (str.equals("FI-FW-01")){
+    	 driver.manage().window().fullscreen();
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	FileUtils.copyFile(scrFile, new File("target\\surefire-reports\\"+className+"\\"+className+".png"));
      }
