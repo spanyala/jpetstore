@@ -29,15 +29,15 @@ public class VerifyProductChrome {
     driver = new ChromeDriver();
     baseUrl = "http://54.152.107.21:9090";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    String className = this.getClass().getName();	  
-	 recorder=new VideoRecord();
-	 recorder.startRecording(className);
-	 driver.manage().window().maximize();
+    
   }
 
   @Test
   public void testUnit() throws Exception {
-	 	
+	  String className = this.getClass().getName();	  
+		 recorder=new VideoRecord();
+		 recorder.startRecording(className);
+		 driver.manage().window().maximize(); 	
 	 
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
