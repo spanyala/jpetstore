@@ -10,11 +10,7 @@
 	<url>http://www.mybatis.org</url>
 
 	<repositories>
-	            <repository>
-			        <id>project.local</id>
-			        <name>Functional - DEV</name>
-			        <url>file:${Functional - DEV}/driver/ATUTestRecorder/ATUTestRecorder/2.1/ATUTestRecorder-2.1.jar</url>
-			    </repository>
+	           
 	<repository>
 		<id>central</id>
 		<url>http://172.31.62.85:8081/artifactory/repo</url>
@@ -50,11 +46,16 @@
 		
 
 	<dependencies>
+		
 		<dependency>
-		    <groupId>ATUTestRecorder</groupId>
-		    <artifactId>ATUTestRecorder</artifactId>
-		    <version>2.1</version>
-		</dependency>
+			  <groupId>ATUTestRecorder</groupId>
+			  <artifactId>ATUTestRecorder</artifactId>
+			  <version>2.1</version>
+			  <scope>system</scope>
+			  <systemPath>${basedir}/driver/ATUTestRecorder/ATUTestRecorder/2.1/ATUTestRecorder-2.1.jar</systemPath>
+			</dependency>
+		
+		
 	   <dependency>
 			    <groupId>com.pojosontheweb</groupId>
 			    <artifactId>monte-repack</artifactId>
