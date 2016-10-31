@@ -12,7 +12,7 @@
 	<repositories>
 	            <repository>
 			        <id>project.local</id>
-			        <name>project</name>
+			        <name>Functional - DEV</name>
 			        <url>file:${Functional - DEV}/driver/ATUTestRecorder/ATUTestRecorder/2.1/ATUTestRecorder-2.1.jar</url>
 			    </repository>
 	<repository>
