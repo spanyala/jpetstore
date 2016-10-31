@@ -38,11 +38,16 @@ public class VerifyProductChrome {
   @Test
   public void testUnit() throws Exception {
 	  String className = this.getClass().getName();
-	  
+	  File dir=new File("target\\surefire-reports\\"+className);
+	   if (!dir.exists()) {
+	       dir.mkdir();
+	   }
+
+	   File file = new File("target\\surefire-reports\\"+className+"\\");  
 		 //recorder=new VideoRecord();
 	 //recorder.startRecording(className);
 	
-	 recorder =new ATUTestRecorder("target\\surefire-reports\\"+className, className, false);
+	 recorder =new ATUTestRecorder("target\\surefire-reports\\"+className+"\\", className, false);
 	 recorder.start();
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
