@@ -2,6 +2,9 @@ package org.mybatis.jpetstore;
 
 import java.util.regex.Pattern;
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -23,10 +26,17 @@ public class VerifyProductChrome {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   private ATUTestRecorder recorder;
+  String className="";
 
   @Before
   public void setUp() throws Exception {
-	
+	  String className = this.getClass().getName();
+	  File dir=new File("target\\surefire-reports\\"+className+"\\");
+	   if (!dir.exists()) {
+	       dir.mkdir();
+	   }
+
+	  
 	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().window().maximize();
@@ -37,17 +47,13 @@ public class VerifyProductChrome {
 
   @Test
   public void testUnit() throws Exception {
-	  String className = this.getClass().getName();
-	  File dir=new File("target\\surefire-reports\\"+className);
-	   if (!dir.exists()) {
-	       dir.mkdir();
-	   }
-
-	   File file = new File("target\\surefire-reports\\"+className+"\\");  
+	 
+	  
 		 //recorder=new VideoRecord();
 	 //recorder.startRecording(className);
-	
-	 recorder =new ATUTestRecorder("target\\surefire-reports\\"+className+"\\", className, false);
+	   DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+	   Date date = new Date();
+	 recorder =new ATUTestRecorder("target\\surefire-reports\\"+className+"\\", className+"-"+dateFormat.format(date), false);
 	 recorder.start();
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
