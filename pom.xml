@@ -13,7 +13,7 @@
 	            <repository>
 			        <id>project.local</id>
 			        <name>project</name>
-			        <url>file:${project.basedir}/driver/ATUTestRecorder/ATUTestRecorder/2.1/ATUTestRecorder-2.1.jar</url>
+			        <url>driver/ATUTestRecorder/ATUTestRecorder/2.1/ATUTestRecorder-2.1.jar</url>
 			    </repository>
 	<repository>
 		<id>central</id>
