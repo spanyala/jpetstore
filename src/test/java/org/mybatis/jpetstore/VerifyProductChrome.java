@@ -30,16 +30,11 @@ public class VerifyProductChrome {
 
   @Before
   public void setUp() throws Exception {
-	  String className = this.getClass().getName();
-	  File dir=new File("target\\surefire-reports\\"+className+"\\");
-	   if (!dir.exists()) {
-	       dir.mkdir();
-	   }
-
+ 
 	  
 	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     driver = new ChromeDriver();
-    driver.manage().window().maximize();
+    //driver.manage().window().maximize();
     baseUrl = "http://54.152.107.21:9090";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -47,13 +42,17 @@ public class VerifyProductChrome {
 
   @Test
   public void testUnit() throws Exception {
-	 
-	  
+	  className = this.getClass().getName();
+		// File dir=new File("driver\\surefire-reports\\"+className);
+		// if (!dir.exists()) {
+		   //  dir.mkdir();
+		  // }
+	// File file = new File("target\\surefire-reports\\"+className+"\\");     
 		 //recorder=new VideoRecord();
 	 //recorder.startRecording(className);
 	   DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
 	   Date date = new Date();
-	 recorder =new ATUTestRecorder("target\\surefire-reports\\"+className+"\\", className+"-"+dateFormat.format(date), false);
+	 recorder =new ATUTestRecorder("driver\\", className+"-"+dateFormat.format(date), false);
 	 recorder.start();
     driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
     Thread.sleep(2000);
