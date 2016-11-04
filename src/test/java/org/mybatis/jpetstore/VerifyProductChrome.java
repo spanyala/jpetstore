@@ -53,7 +53,8 @@ if (str.equals("FI-FW-01")){
 	 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	// File dir=new File("target\\surefire-reports\\"+className);
 	FileUtils.copyFile(scrFile, new File("target\\surefire-reports\\"+className+"\\"+"verifyProductExists.png"));
-	 recorder.stopRecording();
+	Thread.sleep(2000);
+	recorder.stopRecording();
 }
  
  driver.findElement(By.linkText("FI-FW-011")).click(); 
