@@ -30,7 +30,7 @@ public class VerifyProductChrome {
 	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().window().maximize();
-    baseUrl = "http://54.152.107.21:9090";
+    baseUrl = "http://jp-dev.salientcrgt-devops.com";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
   }
