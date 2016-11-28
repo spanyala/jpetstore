@@ -6,13 +6,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
  
 @RunWith(Cucumber.class)
-//@CucumberOptions(
-//	    format = "pretty",
-//	    features = "src/test/java/org/mybatis/jpetstore/search_book.feature" 
-//	)
-@Cucumber.Options(
+@CucumberOptions(
 	    format = "pretty",
 	    features = "src/test/java/org/mybatis/jpetstore/search_book.feature" 
 	)
+
 public class BookSearchTest {
 }
