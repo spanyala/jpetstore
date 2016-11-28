@@ -67,8 +67,8 @@ if (str.equals("FI-FW-01")){
  Thread.sleep(2000);
  driver.findElement(By.linkText("Confirm")).click();
  Thread.sleep(2000);
- driver.findElement(By.linkText("Sign Out")).click();
- Thread.sleep(2000);
+// driver.findElement(By.linkText("Sign Out")).click();
+ //Thread.sleep(2000);
  recorder.stopRecording();
    
   }
@@ -96,8 +96,8 @@ if (str.equals("FI-FW-01")){
  Thread.sleep(2000);
  driver.findElement(By.linkText("Confirm")).click();
  Thread.sleep(2000);
- driver.findElement(By.linkText("Sign Out")).click();
- Thread.sleep(2000);
+ //driver.findElement(By.linkText("Sign Out")).click();
+// Thread.sleep(2000);
  recorder.stopRecording();
    
   }
