@@ -25,7 +25,10 @@ public class SpecializedScreenRecorder extends ScreenRecorder {
  
     @Override
     protected File createMovieFile(Format fileFormat) throws IOException {
-          if (!movieFolder.exists()) {
+          
+    	
+    	
+    	if (!movieFolder.exists()) {
                 movieFolder.mkdirs();
           } else if (!movieFolder.isDirectory()) {
                 throw new IOException("\"" + movieFolder + "\" is not a directory.");
