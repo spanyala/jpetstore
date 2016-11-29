@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 		 glue={"org.mybatis.jpetstore.BookSearchSteps"},
 		 dryRun =true
 		,monochrome = false,
-		format = {"json:target/sureFire-reports/cucumber.json"}
+		format = {"json:target/surefire-reports/cucumber.json"}
 		)
 
 public class BookSearchTest {
