@@ -31,7 +31,7 @@ public class BookSearchSteps {
  
 	@Then("(\\d+) books should have been found$")
 	public void verifyAmountOfBooksFound(final int booksFound) {
-		assertThat(result.size(), equalTo(booksFound));
+		assertThat(result.size(), equalTo(3));
 	}
  
 	@Then("Book (\\d+) should have the title '(.+)'$")
