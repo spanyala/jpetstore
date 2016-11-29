@@ -11,9 +11,9 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		 features = "src/test/java/org/mybatis/jpetstore/search_book.feature" ,
-		 glue={"org.mybatis.jpetstore.BookSearchSteps"},
-		 dryRun =true
-		,monochrome = false,
+		// glue={"org.mybatis.jpetstore.BookSearchSteps"},
+		// dryRun =true
+		//,monochrome = false,
 		format = {"json:target/surefire-reports/cucumber.json"}
 		)
 
