@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		 features = "src/test/java/org/mybatis/jpetstore/cucumber/search_book.feature" ,
-		format = {"json:target/sureFire-reports/cucumber/cucumber.json"}
+		format = {"json:target/sureFire-reports/cucumber.json"}
 		)
 
 
