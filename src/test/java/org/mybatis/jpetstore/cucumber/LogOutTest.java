@@ -11,10 +11,11 @@ import cucumber.api.junit.Cucumber;
 
 
 @CucumberOptions(
-		 features = "src/test/java/org/mybatis/jpetstore/cucumber/LogIn.feature" ,
-		format = {"json:target/sureFire-reports/LogIn.json"},
-		tags= "@Login"
+		 features = "src/test/java/org/mybatis/jpetstore/cucumber/LogOut.feature" ,
+		format = {"json:target/sureFire-reports/cucumber/LogOut.json"},
+		tags= "@LogOut"
 		)
 
-public class LogInTest {		
+public class LogOutTest {
+		
 }
