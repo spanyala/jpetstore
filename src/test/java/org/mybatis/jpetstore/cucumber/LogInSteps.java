@@ -27,7 +27,7 @@ public class LogInSteps {
 	  WebElement passWord;
 
 	 
-	  @Given("^navigate to gmail page$")
+	  @Given("^navigate to jpetstore page$")
 	  
 	  public void navigate(){
 	  
