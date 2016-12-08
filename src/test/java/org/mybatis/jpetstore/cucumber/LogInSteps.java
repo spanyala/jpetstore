@@ -57,12 +57,9 @@ public class LogInSteps {
 	        String actualText=   link.getText();
 	 
 	        Assert.assertTrue("Sign Out",expectedText.equals(actualText));
-	  
+	        dr.quit();
 	        }
 
-	 @After
-	 public void closeBrowser(){
-		 dr.quit();
-	 }
+	
 	
 }
