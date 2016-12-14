@@ -103,6 +103,32 @@ if (str.equals("FI-FW-01")){
    
   }
 
+  @Test
+  public void verifyLoginOperation() throws Exception{
+	  String className = this.getClass().getName();
+	  recorder=new VideoRecord();
+		 recorder.startRecording(className,"verify Log in operation ");	
+		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+	  driver.findElement(By.name("signon")).click();
+	  
+      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+      Thread.sleep(2000);
+      recorder.stopRecording();
+  }
+
+  @Test
+  public void verifyLogOutOperation() throws Exception{
+	  String className = this.getClass().getName();
+	  recorder=new VideoRecord();
+		 recorder.startRecording(className,"verify Log Out operation ");	
+		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+		 driver.findElement(By.name("signon")).click();
+		  
+         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+         Thread.sleep(2000);
+         driver.findElement(By.linkText("Sign Out")).click();
+      recorder.stopRecording();
+  }
   @After
   public void tearDown() throws Exception {
 	  driver.quit();
