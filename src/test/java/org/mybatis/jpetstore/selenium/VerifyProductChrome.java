@@ -43,7 +43,10 @@ public class VerifyProductChrome {
 	 recorder.startRecording(className,"verifyProductExists");	
  driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
  Thread.sleep(2000);
+ driver.findElement(By.name("username")).sendKeys("j2ee");
+ driver.findElement(By.name("password")).sendKeys("j2ee");
  driver.findElement(By.name("signon")).click();
+ 
  Thread.sleep(2000);
  driver.findElement(By.cssSelector("#SidebarContent > a > img")).click();
  Thread.sleep(2000);
@@ -81,6 +84,8 @@ if (str.equals("FI-FW-01")){
 	 recorder.startRecording(className,"verifyTransactionComplete");	
  driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
  Thread.sleep(2000);
+ driver.findElement(By.name("username")).sendKeys("j2ee");
+ driver.findElement(By.name("password")).sendKeys("j2ee");
  driver.findElement(By.name("signon")).click();
  Thread.sleep(2000);
  driver.findElement(By.cssSelector("#SidebarContent > a > img")).click();
@@ -109,6 +114,8 @@ if (str.equals("FI-FW-01")){
 	  recorder=new VideoRecord();
 		 recorder.startRecording(className,"verify Log in operation ");	
 		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+	  driver.findElement(By.name("username")).sendKeys("j2ee");
+	  driver.findElement(By.name("password")).sendKeys("j2ee");		 
 	  driver.findElement(By.name("signon")).click();
 	  
       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -122,6 +129,8 @@ if (str.equals("FI-FW-01")){
 	  recorder=new VideoRecord();
 		 recorder.startRecording(className,"verify Log Out operation ");	
 		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+		 driver.findElement(By.name("username")).sendKeys("j2ee");
+		 driver.findElement(By.name("password")).sendKeys("j2ee");
 		 driver.findElement(By.name("signon")).click();
 		  
          driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
