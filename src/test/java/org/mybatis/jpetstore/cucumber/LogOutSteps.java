@@ -44,6 +44,9 @@ public class LogOutSteps {
 	  
 	  @When("^user logged in using username And password  And log out$")
 	  public void user_logged_in_using_username_And_password_And_log_out() throws Throwable {
+		 
+		  dr.findElement(By.name("username")).sendKeys("j2ee");
+		  dr.findElement(By.name("password")).sendKeys("j2ee");
 		  dr.findElement(By.name("signon")).click();
 		  
 	         dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
