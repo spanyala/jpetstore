@@ -42,10 +42,15 @@ public class LogInSteps {
 	         }
 	  @When("^user logged in using username And password$")
 	  public void user_logged_in_using_username_And_password() throws Throwable {
-		  dr.findElement(By.name("signon")).click();
+		  recorder=new VideoRecord();
+			 recorder.startRecording(className,"verify Log in operation ");	
+		 dr.findElement(By.name("username")).sendKeys("j2ee");
+		 dr.findElement(By.name("password")).sendKeys("j2ee");	 
+		 dr.findElement(By.name("signon")).click();
 		  
 	         dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	         Thread.sleep(2000);
+	         recorder.stopRecording();
 	  }
 	 
 	  @Then("^home page should be displayed$")
