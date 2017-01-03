@@ -42,6 +42,7 @@ public class LogInSteps {
 	         }
 	  @When("^user logged in using username And password$")
 	  public void user_logged_in_using_username_And_password() throws Throwable {
+		  String className = this.getClass().getName();
 		  recorder=new VideoRecord();
 			 recorder.startRecording(className,"verify Log in operation ");	
 		 dr.findElement(By.name("username")).sendKeys("j2ee");
