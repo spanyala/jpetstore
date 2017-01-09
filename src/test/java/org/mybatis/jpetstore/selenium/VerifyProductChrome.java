@@ -61,7 +61,7 @@ if (str.equals("FI-FW-01")){
 	recorder.stopRecording();
 }
  
- driver.findElement(By.linkText("FI-FW-01")).click(); 
+ driver.findElement(By.linkText("FI-FW-09")).click(); 
  Thread.sleep(2000);
  driver.findElement(By.linkText("Add to Cart")).click();
  Thread.sleep(2000);
