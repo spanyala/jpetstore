@@ -43,15 +43,14 @@ describe('Petstore demo', function() {
 		            var stream = fs.createWriteStream("testPetMain.html");
        			    stream.once('open', function(fd) {
         		    	for (i=0; i<results.violations.length; i++) {
-		 	    		stream.write("Help; " + results.violations[1].help + "<br/>\n");
-         		    		stream.write("&nbsp;&nbsp;description:  " + results.violations[i].description + "<br/>\n");
+         		    		stream.write("description:  " + results.violations[i].description + "<br/>\n");
          		    		// stream.write("impact:  " + results.violations[i].impact + "<br/>\n");
          		    		var myHtml = results.violations[i].nodes[0].html;
          		    		myHtml = myHtml.split("<").join("&lt;");
          		    		myHtml = myHtml.split(">").join("&gt;");
-         		    		stream.write("&nbsp;&nbsp;&nbsp;&nbsp;HTML:  " + myHtml + "<br/>\n");
+         		    		stream.write("HTML:  " + myHtml + "<br/>\n");
          		    		for (j=0; j< results.violations[i].nodes[0].any.length; j++) {
-          					stream.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message:  " + results.violations[i].nodes[0].any[j].message + "<br/>\n");
+          					stream.write("message:  " + results.violations[i].nodes[0].any[j].message + "<br/>\n");
          		    		}
         			}
         		   stream.end();
