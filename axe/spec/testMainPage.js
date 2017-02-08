@@ -39,13 +39,13 @@ describe('Petstore demo', function() {
                     .analyze(function(results) {
                         console.log('Accessibility Violations: ', results.violations.length);
                         if (results.violations.length > 0) {
-                            //console.log(util.inspect(results.violations, true, null));
+                            // console.log(util.inspect(results.violations, true, null));
 		            var stream = fs.createWriteStream("testPetMain.html");
        			    stream.once('open', function(fd) {
         		    	for (i=0; i<results.violations.length; i++) {
 		 	    		stream.write("Help; " + results.violations[1].help + "<br/>\n");
          		    		stream.write("&nbsp;&nbsp;description:  " + results.violations[i].description + "<br/>\n");
-         		    		//stream.write("impact:  " + results.violations[i].impact + "<br/>\n");
+         		    		// stream.write("impact:  " + results.violations[i].impact + "<br/>\n");
          		    		var myHtml = results.violations[i].nodes[0].html;
          		    		myHtml = myHtml.split("<").join("&lt;");
          		    		myHtml = myHtml.split(">").join("&gt;");
