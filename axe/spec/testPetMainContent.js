@@ -60,8 +60,7 @@ describe('Radio button demo', function() {
 						}
 						stream.write("<br/>\n");
 					}
-					stream.write("<hr/>\n");
-	 				stream.write("<br/>\n");				
+					stream.write("<hr/>\n");				
         			}
         			stream.end();
 			    });
