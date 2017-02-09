@@ -90,7 +90,7 @@ describe('Radio button demo', function() {
                     .analyze(function(results) {
                         console.log('Accessibility Violations: ', results.violations.length);
                         if (results.violations.length > 0) {
-                            console.log(util.inspect(results.violations, true, null));
+                            //console.log(util.inspect(results.violations, true, null));
 				var stream = fs.createWriteStream("testPetLogin.html");
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
