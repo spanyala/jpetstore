@@ -52,8 +52,9 @@ describe('Radio button demo', function() {
 							stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[j].any[k].impact + "<br/>\n");
           						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Message:  " + results.violations[i].nodes[j].any[k].message + "<br/>\n");
 						}
+						stream.write("<br/>\n");
 					}
-	 				stream.write("<br/>\n");
+	 				stream.write("<br/><br/>\n");
         			}
         			stream.end();
 			    });
