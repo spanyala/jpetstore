@@ -41,7 +41,7 @@ describe('Radio button demo', function() {
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
 					var violation_num = i+1;
-					stream.write("Violation #" + violation_num + "/" + results.violations.length + "<br/>\n");
+					stream.write("<p style=''color:blue;''>Violation #" + violation_num + "/" + results.violations.length + "</p><br/>\n");
          				stream.write("Help: " + results.violations[i].help + "<br/>\n");
 					//stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
          				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
@@ -49,7 +49,7 @@ describe('Radio button demo', function() {
 					stream.write("<br/>\n");
          				for (j=0; j< results.violations[i].nodes.length; j++) {
 						var error_num = j+1;
-						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Error #" + error_num + "/" + results.violations[i].nodes.length + "<br/>\n");
+						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;<p style=''color:red;''>Error #" + error_num + "/" + results.violations[i].nodes.length + "</p><br/>\n");
 						var myHtml = results.violations[i].nodes[j].html;
          					myHtml = myHtml.split("<").join("&lt;");
          					myHtml = myHtml.split(">").join("&gt;");
