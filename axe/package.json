@@ -11,7 +11,7 @@
 	"test4": "./node_modules/.bin/jasmine spec/testMainBanner.js && echo ok || echo not ok",
 	"test5": "./node_modules/.bin/jasmine spec/testJPetLogin.js && echo ok || echo not ok",
 	"test6": "./node_modules/.bin/jasmine spec/testKoi.js && echo ok || echo not ok",
-	"test7": "./node_modules/.bin/jasmine spec/testPetMain.js && echo ok || echo not ok",
+	"test7": "./node_modules/.bin/jasmine spec/testPetMain.js && ./node_modules/.bin/jasmine spec/testJPetLogin.js && echo ok || echo not ok",
 	"test8": "./node_modules/.bin/jasmine spec/testPetMainContent.js && echo ok || echo not ok",
 	"test9": "./node_modules/.bin/jasmine spec/testKoi2.js && echo ok || echo not ok",
 	"test10": "./node_modules/.bin/jasmine spec/testCheckoutPage2.js && echo ok || echo not ok",
