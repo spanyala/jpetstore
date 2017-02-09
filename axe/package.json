@@ -22,7 +22,7 @@
 	"test15": "./node_modules/.bin/jasmine spec/testPetMain2.js && echo ok || echo not ok",
 	"test16": "./node_modules/.bin/jasmine spec/testPetMainContent2.js && echo ok || echo not ok",
 	"test17": "./node_modules/.bin/jasmine spec/testAddKoi.js && echo ok || echo not ok",
-	"test18": "./node_modules/.bin/jasmine spec/testAll.js && echo ok || echo not ok",
+	"test18": "./node_modules/.bin/jasmine spec/testAllPages.js && echo ok || echo not ok",
 	"testO": "./node_modules/.bin/jasmine spec/testODIMS2.js && echo ok || echo not ok" 
   },
   "author": {
