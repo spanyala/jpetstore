@@ -40,19 +40,21 @@ describe('Radio button demo', function() {
 			    var stream = fs.createWriteStream("testPetMainContent.html");
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
+					var violation_num = i+1;
+					stream.write("Violation #" + violation_num + "<br/>\n");
          				stream.write("Help: " + results.violations[i].help + "<br/>\n");
          				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
-         				//stream.write("impact:  " + results.violations[i].impact + "<br/>\n");
+         				stream.write("Overall impact:  " + results.violations[i].impact + "<br/>\n");
 					stream.write("<br/>\n");
          				for (j=0; j< results.violations[i].nodes.length; j++) {
-						var violation_num = j+1;
-						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Violation #" + violation_num + "<br/>\n");
-						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[j].impact + "<br/>\n");
+						var error_num = j+1;
+						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Error #" + error_num + "<br/>\n");
 						var myHtml = results.violations[i].nodes[j].html;
          					myHtml = myHtml.split("<").join("&lt;");
          					myHtml = myHtml.split(">").join("&gt;");
          					stream.write("&nbsp;&nbsp;&nbsp;&nbsp;HTML:  " + myHtml + "<br/>\n");
 						for (k=0; k< results.violations[i].nodes[j].any.length; k++) {
+							stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[j].any[k].impact + "<br/>\n");
           						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Message:  " + results.violations[i].nodes[j].any[k].message + "<br/>\n");
 						}
 						stream.write("<br/>\n");
