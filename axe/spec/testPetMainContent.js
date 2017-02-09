@@ -43,7 +43,7 @@ describe('Radio button demo', function() {
 					var violation_num = i+1;
 					stream.write("Violation #" + violation_num + "<br/>\n");
          				stream.write("Help: " + results.violations[i].help + "<br/>\n");
-					stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
+					//stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
          				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
          				stream.write("Overall impact:  " + results.violations[i].impact + "<br/>\n");
 					stream.write("<br/>\n");
