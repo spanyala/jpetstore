@@ -47,12 +47,12 @@ describe('Radio button demo', function() {
          				for (j=0; j< results.violations[i].nodes.length; j++) {
 						var violation_num = j+1;
 						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Violation #" + violation_num + "<br/>\n");
+						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[j].impact + "<br/>\n");
 						var myHtml = results.violations[i].nodes[j].html;
          					myHtml = myHtml.split("<").join("&lt;");
          					myHtml = myHtml.split(">").join("&gt;");
          					stream.write("&nbsp;&nbsp;&nbsp;&nbsp;HTML:  " + myHtml + "<br/>\n");
 						for (k=0; k< results.violations[i].nodes[j].any.length; k++) {
-							stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[j].any[k].impact + "<br/>\n");
           						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Message:  " + results.violations[i].nodes[j].any[k].message + "<br/>\n");
 						}
 						stream.write("<br/>\n");
