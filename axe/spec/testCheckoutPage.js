@@ -30,12 +30,12 @@ describe('Checkout demo', function() {
 
 
     it('...should go to the checkout page and analyze it', function (done) {
-		driver.findElement(selenium.By.name("signon")).click();
-		driver.findElement(selenium.By.css("#SidebarContent > a > img")).click();
-		driver.findElement(selenium.By.linkText("FI-FW-01")).click(); 
-		driver.findElement(selenium.By.linkText("Add to Cart")).click();
-		driver.findElement(selenium.By.linkText("Proceed to Checkout")).click();
-		driver.findElement(selenium.By.id("Catalog"))
+		//driver.findElement(selenium.By.name("signon")).click();
+		//driver.findElement(selenium.By.css("#SidebarContent > a > img")).click();
+		//driver.findElement(selenium.By.linkText("FI-FW-01")).click(); 
+		//driver.findElement(selenium.By.linkText("Add to Cart")).click();
+		//driver.findElement(selenium.By.linkText("Proceed to Checkout")).click();
+		//driver.findElement(selenium.By.id("Catalog"))
             .then(function () {
                 AxeBuilder(driver)
                     .analyze(function(results) {
