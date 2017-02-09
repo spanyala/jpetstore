@@ -48,6 +48,7 @@ describe('Radio button demo', function() {
          				myHtml = myHtml.split(">").join("&gt;");
          				stream.write("&nbsp;&nbsp;&nbsp;&nbsp;HTML:  " + myHtml + "<br/>\n");
          				for (j=0; j< results.violations[i].nodes[0].any.length; j++) {
+						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[0].any[j].impact + "<br/>\n");
           					stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Message:  " + results.violations[i].nodes[0].any[j].message + "<br/>\n");
          				}
 	 				stream.write("<br/>\n");
