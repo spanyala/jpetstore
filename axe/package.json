@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "./node_modules/.bin/jasmine init",
     "test": "./node_modules/.bin/jasmine spec/testHome.js && echo ok || echo not ok",
-	"testall": "./node_modules/.bin/jasmine spec/*.js",
+	"testall": "./node_modules/.bin/jasmine spec/*.js && echo ok || echo not ok",
 	"test1": "./node_modules/.bin/jasmine spec/testCheckoutPage.js && echo ok || echo not ok",
 	"test2": "./node_modules/.bin/jasmine spec/testFish.js && echo ok || echo not ok",
 	"test3": "./node_modules/.bin/jasmine spec/testAddKoi.js && echo ok || echo not ok",
