@@ -43,15 +43,27 @@ describe('Petstore demo', function() {
 		            var stream = fs.createWriteStream("testMainPage.html");
        			    stream.once('open', function(fd) {
         		    	for (i=0; i<results.violations.length; i++) {
-         		    		stream.write("description:  " + results.violations[i].description + "<br/>\n");
-         		    		// stream.write("impact:  " + results.violations[i].impact + "<br/>\n");
-         		    		var myHtml = results.violations[i].nodes[0].html;
-         		    		myHtml = myHtml.split("<").join("&lt;");
-         		    		myHtml = myHtml.split(">").join("&gt;");
-         		    		stream.write("HTML:  " + myHtml + "<br/>\n");
-         		    		for (j=0; j< results.violations[i].nodes[0].any.length; j++) {
-          					stream.write("message:  " + results.violations[i].nodes[0].any[j].message + "<br/>\n");
-         		    		}
+         		    		var violation_num = i+1;
+					stream.write("<div style='color:#0000FF'>Violation #" + violation_num + "/" + results.violations.length + "</div>\n");
+         				stream.write("Help: " + results.violations[i].help + "<br/>\n");
+					//stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
+         				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
+         				stream.write("Overall impact:  " + results.violations[i].impact + "<br/>\n");
+					stream.write("<br/>\n");
+         				for (j=0; j< results.violations[i].nodes.length; j++) {
+						var error_num = j+1;
+						stream.write("<div style='color:red'>&nbsp;&nbsp;&nbsp;&nbsp;Error #" + error_num + "/" + results.violations[i].nodes.length + "</div>\n");
+						var myHtml = results.violations[i].nodes[j].html;
+         					myHtml = myHtml.split("<").join("&lt;");
+         					myHtml = myHtml.split(">").join("&gt;");
+         					stream.write("&nbsp;&nbsp;&nbsp;&nbsp;HTML:  " + myHtml + "<br/>\n");
+						for (k=0; k< results.violations[i].nodes[j].any.length; k++) {
+							stream.write("&nbsp;&nbsp;&nbsp;&nbsp;Impact:  " + results.violations[i].nodes[j].any[k].impact + "<br/>\n");
+          						stream.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message:  " + results.violations[i].nodes[j].any[k].message + "<br/>\n");
+						}
+						stream.write("<br/>\n");
+					}
+					stream.write("<hr/>\n");
         			}
         		   stream.end();
        			   });
