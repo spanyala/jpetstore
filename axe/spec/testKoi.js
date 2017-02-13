@@ -37,7 +37,7 @@ describe('Radio button demo', function() {
                         console.log('Accessibility Violations: ', results.violations.length);
                         if (results.violations.length > 0) {
                             //console.log(util.inspect(results.violations, true, null));
-			    var stream = fs.createWriteStream("testKoi.html");
+			    var stream = fs.createWriteStream("reports/testKoi.html");
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
          				var violation_num = i+1;
