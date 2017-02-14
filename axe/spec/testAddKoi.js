@@ -41,10 +41,8 @@ describe('Radio button demo', function() {
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
          				var violation_num = i+1;
-					stream.write("<html>");
-					//stream.write("<div style='color:#0000FF'>Violation #" + violation_num + "/" + results.violations.length + "</div>\n");
-					stream.write("<span color='#0000FF'>Violation #" + violation_num + "/" + results.violations.length + "</span>\n");
-         				stream.write("Help: " + results.violations[i].help + "<br/>\n");
+					stream.write("<div style='color:#0000FF'>Violation #" + violation_num + "/" + results.violations.length + "</div>\n");
+					stream.write("Help: " + results.violations[i].help + "<br/>\n");
 					//stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
          				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
          				stream.write("Overall impact:  " + results.violations[i].impact + "<br/>\n");
@@ -64,7 +62,6 @@ describe('Radio button demo', function() {
 					}
 					stream.write("<hr/>\n");
         			}
-				stream.write("</html>");
         			stream.end();
 			    });
                         }
