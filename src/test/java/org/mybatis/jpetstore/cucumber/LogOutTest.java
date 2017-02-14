@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		 features = "src/test/java/org/mybatis/jpetstore/cucumber/LogOut.feature" ,
-		format = {"json:target/sureFire-reports/LogOut.json"},
+		format = {"json:target/sureFire-reports/cucumber.json"},
 		tags= "@LogOut"
 		)
 
