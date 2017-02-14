@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		 features = "src/test/java/org/mybatis/jpetstore/cucumber/LogIn.feature" ,
-		format = {"json:target/sureFire-reports/cucumber.json"},
+		format = {"json:target/sureFire-reports/Login.json"},
 		tags= "@Login"
 		)
 
