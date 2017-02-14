@@ -41,7 +41,7 @@ describe('Radio button demo', function() {
        			    stream.once('open', function(fd) {
         			for (i=0; i<results.violations.length; i++) {
          				var violation_num = i+1;
-					stream.write('<div style="color:#0000FF">Violation #' + violation_num + '/' + results.violations.length + "</div>\n");
+					stream.write("<div><font colr='#0000FF'>Violation #" + violation_num + "/" + results.violations.length + "</span></div>\n");
          				stream.write("Help: " + results.violations[i].help + "<br/>\n");
 					//stream.write("<a href=''" + results.violations[i].helpUrl + "''>More Info</a><br/>\n");
          				stream.write("Description:  " + results.violations[i].description + "<br/>\n");
@@ -49,7 +49,7 @@ describe('Radio button demo', function() {
 					stream.write("<br/>\n");
          				for (j=0; j< results.violations[i].nodes.length; j++) {
 						var error_num = j+1;
-						stream.write("<div style='color:red'>&nbsp;&nbsp;&nbsp;&nbsp;Error #" + error_num + "/" + results.violations[i].nodes.length + "</div>\n");
+						stream.write("<div><span color='#ff0000'>&nbsp;&nbsp;&nbsp;&nbsp;Error #" + error_num + "/" + results.violations[i].nodes.length + "</span></div>\n");
 						var myHtml = results.violations[i].nodes[j].html;
          					myHtml = myHtml.split("<").join("&lt;");
          					myHtml = myHtml.split(">").join("&gt;");
