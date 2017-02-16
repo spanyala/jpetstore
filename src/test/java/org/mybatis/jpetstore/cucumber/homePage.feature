@@ -3,6 +3,6 @@ Feature: HomePage Feature File
 Scenario: Home page scenario test for Jpetstore
 
 Given navigate to jpetstore page to Log inn
-When user login in using username And password 
-Then home page displayed
+When user logged inn using username And password 
+Then home page shouldn be displayed
 

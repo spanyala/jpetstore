@@ -40,32 +40,29 @@ public class HomePage {
 	         dr.get(baseUrl);         
 	        // dr.findElement(By.name("signon")).click();
 	         }
-	  @When("^user login in using username And password$")
+	  @When("^user logged inn using username And password$")
 	  public void user_logged_in_using_username_And_password() throws Throwable {
 		  String className = this.getClass().getName();
 		  recorder=new VideoRecord();
 			 recorder.startRecording(className,"verify Log in operation ");	
 		 dr.findElement(By.name("username")).sendKeys("j2ee");
 		 dr.findElement(By.name("password")).sendKeys("j2ee");	 
-		 dr.findElement(By.name("signonnn")).click();
+		 dr.findElement(By.name("signon")).click();
 		  
 	         dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	         Thread.sleep(2000);
 	         recorder.stopRecording();
 	  }
 	 
-	  @Then("^home page displayed$")
+	  @Then("^home page shouldn be displayed$")
 	  
 	  public void verifySuccessful(){
-	 
+	  
 	        String expectedText="Sign Out";
 	        WebElement link  = dr.findElement(By.linkText("Sign Out"));
 	        String actualText=   link.getText();
-	        if(expectedText.equals("Sign Out")){
-	            Assert.fail();
-	            dr.quit();
-	        }	        
-	        Assert.assertTrue("",expectedText.equals(actualText));	       
+	 
+	        Assert.assertTrue("Sign Outt",expectedText.equals(actualText));
 	        dr.quit();
 	        }
 
