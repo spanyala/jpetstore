@@ -31,7 +31,7 @@ public class VerifyProductChrome {
 	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().window().maximize();
-    baseUrl = "http://jp-dev.salientcrgt-devops.com";
+    baseUrl = System.getenv("JSTOREURL");
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
   }
@@ -41,7 +41,7 @@ public class VerifyProductChrome {
 	  
 		 recorder=new VideoRecord();
 	 recorder.startRecording(className,"verifyProductExists");	
- driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+ driver.get(baseUrl);
  Thread.sleep(2000);
  driver.findElement(By.name("username")).sendKeys("j2ee");
  driver.findElement(By.name("password")).sendKeys("j2ee");
