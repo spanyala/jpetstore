@@ -25,6 +25,7 @@ public class LogInSteps {
 	  private VideoRecord recorder;
 	  WebElement userName;
 	  WebElement passWord;
+	 
 
 	 
 	  @Given("^navigate to jpetstore page to Log in$")
@@ -34,7 +35,8 @@ public class LogInSteps {
 		  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
 		    dr = new ChromeDriver();
 		    dr.manage().window().maximize();
-		    baseUrl = "http://jp-dev.salientcrgt-devops.com/jpetstore/actions/Account.action?signonForm=";
+		    baseUrl = System.getenv("JSTOREURL");
+		    System.out.println(System.getenv("JSTOREURL"));
 		    dr.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  
 	         dr.get(baseUrl);         
