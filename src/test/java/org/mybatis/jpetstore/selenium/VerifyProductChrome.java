@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.*;
+import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
@@ -35,6 +36,7 @@ public class VerifyProductChrome {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
   }
+  @Category(RegressionTests.class)
   @Test
   public void verifyProductExists() throws Exception {
 	  String className = this.getClass().getName();
@@ -76,13 +78,14 @@ if (str.equals("FI-FW-01")){
  recorder.stopRecording();
    
   }
+  @Category(RegressionTests.class)
   @Test
   public void verifyTransactionComplete() throws Exception {
 	  String className = this.getClass().getName();
 	  
 		 recorder=new VideoRecord();
 	 recorder.startRecording(className,"verifyTransactionComplete");	
- driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+ driver.get(baseUrl );
  Thread.sleep(2000);
  driver.findElement(By.name("username")).sendKeys("j2ee");
  driver.findElement(By.name("password")).sendKeys("j2ee");
@@ -113,7 +116,7 @@ if (str.equals("FI-FW-01")){
 	  String className = this.getClass().getName();
 	  recorder=new VideoRecord();
 		 recorder.startRecording(className,"verify Log in operation ");	
-		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+		 driver.get(baseUrl );
 	  driver.findElement(By.name("username")).sendKeys("j2ee");
 	  driver.findElement(By.name("password")).sendKeys("j2ee");		 
 	  driver.findElement(By.name("signon")).click();
@@ -122,13 +125,13 @@ if (str.equals("FI-FW-01")){
       Thread.sleep(2000);
       recorder.stopRecording();
   }
-
+  @Category(RegressionTests.class)
   @Test
   public void verifyLogOutOperation() throws Exception{
 	  String className = this.getClass().getName();
 	  recorder=new VideoRecord();
 		 recorder.startRecording(className,"verify Log Out operation ");	
-		 driver.get(baseUrl + "/jpetstore/actions/Account.action?signonForm=");
+		 driver.get(baseUrl );
 		 driver.findElement(By.name("username")).sendKeys("j2ee");
 		 driver.findElement(By.name("password")).sendKeys("j2ee");
 		 driver.findElement(By.name("signon")).click();

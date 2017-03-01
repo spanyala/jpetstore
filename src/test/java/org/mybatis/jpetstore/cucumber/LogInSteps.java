@@ -36,7 +36,7 @@ public class LogInSteps {
 		    dr = new ChromeDriver();
 		    dr.manage().window().maximize();
 		    baseUrl = System.getenv("JSTOREURL");
-		    System.out.println(System.getenv("JSTOREURL"));
+		    
 		    dr.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  
 	         dr.get(baseUrl);         
