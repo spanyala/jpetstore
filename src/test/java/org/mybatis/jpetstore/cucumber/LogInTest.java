@@ -4,7 +4,7 @@ package org.mybatis.jpetstore.cucumber;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.mybatis.jpetstore.selenium.RegressionTests;
-
+import org.mybatis.jpetstore.selenium.release;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
