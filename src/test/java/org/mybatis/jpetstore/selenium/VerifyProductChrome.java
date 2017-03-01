@@ -125,7 +125,7 @@ if (str.equals("FI-FW-01")){
       Thread.sleep(2000);
       recorder.stopRecording();
   }
-  @Category(RegressionTests.class)
+  @Category(release.class)
   @Test
   public void verifyLogOutOperation() throws Exception{
 	  String className = this.getClass().getName();
