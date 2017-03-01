@@ -10,7 +10,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	@IncludeCategory(release.class)
 	@ExcludeCategory(RegressionTests.class)
  
-	@SuiteClasses( { VerifyProductChrome.class }) // Note that Categories is a kind of Suite
+	@SuiteClasses( {VerifyLoginOperation.class, VerifyProductChrome.class }) // Note that Categories is a kind of Suite
 	public class TestSuite {
 	 
 	}
