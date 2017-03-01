@@ -110,7 +110,7 @@ if (str.equals("FI-FW-01")){
  recorder.stopRecording();
    
   }
-
+  @Category(release.class)
   @Test
   public void verifyLoginOperation() throws Exception{
 	  String className = this.getClass().getName();
