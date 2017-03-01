@@ -227,7 +227,8 @@
 		 <includes>
 		  <include>**/*.class</include>
 		 </includes>
-		 
+		 <excludedGroups>${env.TestType}</excludedGroups>
+	
 		</configuration>
 		</plugin>
         
