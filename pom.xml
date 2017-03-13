@@ -243,7 +243,7 @@
                 <goal>generateRunners</goal>
             </goals>
             <configuration>
-               
+                <glue>org.mybatis.jpetstore.cucumber.HomePage,org.mybatis.jpetstore.cucumber.LogInSteps,org.mybatis.jpetstore.cucumber.LogOutSteps</glue>
                 <featuresDirectory>src/test/java/org/mybatis/jpetstore/cucumber /</featuresDirectory>
                 <cucumberOutputDir>target/cucumber</cucumberOutputDir>
                 <format>json,html</format>
