@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 		tags= "@LogOut"
 		)
 
-@Category(release.class)
+//@Category(release.class)
 
 public class LogOutTest {
 		
