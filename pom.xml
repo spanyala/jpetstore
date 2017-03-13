@@ -231,27 +231,7 @@
 	   
 		</configuration>
 		</plugin>
-        <plugin>
-    <groupId>com.github.temyers</groupId>
-    <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-    <version>1.0.1</version>
-    <executions>
-        <execution>
-            <id>generateRunners</id>
-            <phase>validate</phase>
-            <goals>
-                <goal>generateRunners</goal>
-            </goals>
-            <configuration>
-                <glue>org.mybatis.jpetstore.cucumber.HomePage,org.mybatis.jpetstore.cucumber.LogInSteps,org.mybatis.jpetstore.cucumber.LogOutSteps</glue>
-                <featuresDirectory>src/test/java/org/mybatis/jpetstore/cucumber /</featuresDirectory>
-                <cucumberOutputDir>target/cucumber</cucumberOutputDir>
-                <format>json,html</format>
-                <tags>"~@ignored"</tags>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
+        
 		</plugins>
 	</build>
 
