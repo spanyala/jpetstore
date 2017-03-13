@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		 features = "src/test/java/org/mybatis/jpetstore/cucumber/HomePage.feature" ,
-		format = {"pretty", "json:target/surefire-reports/cucumber/HomePage.json"},
+		format = {"pretty", "json:target/surefire-reports/HomePage.json"},
 		tags= "@HomePage"
 		)
 
