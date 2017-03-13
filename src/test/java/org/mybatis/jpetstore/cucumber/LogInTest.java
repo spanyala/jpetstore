@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 		tags= "@Login"
 		)
 
-//@Category(release.class)
+@Category(release.class)
 
 public class LogInTest {
 		

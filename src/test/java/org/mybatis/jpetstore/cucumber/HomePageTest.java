@@ -18,6 +18,6 @@ import cucumber.api.junit.Cucumber;
 		tags= "@HomePage"
 		)
 
-//@Category(RegressionTests.class)
+@Category(RegressionTests.class)
 public class HomePageTest {		
 }
