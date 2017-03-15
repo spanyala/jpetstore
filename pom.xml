@@ -237,21 +237,15 @@
 
 <profiles>
     <profile>
-        <id>Regression</id>
-        
+        <id>Regression</id>      
         <properties>    
-            <build.profile.id>Regression</build.profile.id>
             <testcase.groups>org.mybatis.jpetstore.selenium.RegressionTests</testcase.groups>
         </properties>
     </profile>
    
     <profile>
         <id>release</id>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
         <properties>           
-            <build.profile.id>release</build.profile.id>
            <testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
         </properties>
     </profile>
