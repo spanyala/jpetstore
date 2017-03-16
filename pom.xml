@@ -225,7 +225,7 @@
 		</dependencies>
 		<configuration>
 		 <includes>
-		  <include>**/RegressionTests.class</include>
+		  <include>**/*Reg*</include>
 		 </includes>
 		<!--  <groups>${testcase.groups}</groups> -->
 	   
@@ -246,7 +246,7 @@
         <version>2.11</version>
         <configuration>
         <includes>
-		  <include>**/release.class</include>
+		  <include>**/*rel*</include>
 		 </includes>
           
         </configuration>
