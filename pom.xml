@@ -225,15 +225,55 @@
 		</dependencies>
 		<configuration>
 		 <includes>
-		  <include>**/*.class</include>	  
+		  <include>**/*.class</include>
 		 </includes>
-	     <groups>org.mybatis.jpetstore.selenium.release</groups>
+		 <groups>${testcase.groups}</groups>	     
 		</configuration>
 		</plugin>
         
 		</plugins>
 	</build>
 
+<profiles>
 
+	<profile>
+		<id>Regression</id>
+		<properties>
+			<testcase.groups>org.mybatis.jpetstore.selenium.RegressionTests</testcase.groups>
+		</properties>
+	</profile>
+
+	<profile>
+		<id>release</id>
+		<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <executions>
+                    <execution>
+                        <id>release-test</id>
+                        <goals>
+                            <goal>release-test</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>verify</id>
+                        <goals>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            </plugins>
+            </build>
+        
+		<properties>
+			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
+		</properties>
+	</profile>
+	
+</profiles>
 	
 	</project>
