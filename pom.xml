@@ -245,6 +245,17 @@
 
 	<profile>
 		<id>release</id>
+		 <activation>
+    <activeByDefault>true</activeByDefault>
+  </activation>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 		<properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
 		</properties>
