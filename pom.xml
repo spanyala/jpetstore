@@ -236,51 +236,32 @@
 	</build>
 
 <profiles>
-    <profile>
-        <id>Regression</id>   
-        	
-        <properties>    
-            <testcase.groups>org.mybatis.jpetstore.selenium.RegressionTests</testcase.groups>
-        </properties>
-    </profile>
-   
-    <profile>
-        <id>release</id>
-        <build>
-		<finalName>jpetstore</finalName>
-		<plugins>	
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-surefire-plugin</artifactId>
-		<version>2.11</version>
-		<dependencies>
-		 <dependency>
-		  <groupId>org.apache.maven.surefire</groupId>
-		  <artifactId>surefire-junit47</artifactId>
-		  <version>2.17</version>
-		 </dependency>
-		<dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>1.1.8</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.1.8</version>
-            <scope>test</scope>
-        </dependency>
-		</dependencies>
-		</plugin>
-        
-		</plugins>
-	</build>   
-        <properties>           
-           <testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
-        </properties>
-    </profile>
+	<profile>
+		<id>Regression</id>
+
+		<properties>
+			<testcase.groups>org.mybatis.jpetstore.selenium.RegressionTests</testcase.groups>
+		</properties>
+	</profile>
+
+	<profile>
+		<id>release</id>
+		<build>
+			<finalName>jpetstore</finalName>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.11</version>
+
+				</plugin>
+
+			</plugins>
+		</build>
+		<properties>
+			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
+		</properties>
+	</profile>
 </profiles>
 	
 	</project>
