@@ -281,10 +281,7 @@
 					<version>2.17</version>
 				</dependency>
 			</dependencies>
-			<configuration>
-				<groups>${testcase.groups}</groups>
-
-			</configuration>
+			
 		</plugin>
 
 	</plugins>
