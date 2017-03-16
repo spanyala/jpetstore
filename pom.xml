@@ -224,11 +224,11 @@
 		 </dependency>
 		</dependencies>
 		<configuration>
-<!-- 		 <includes> -->
-<!-- 		  <include>**/*.class</include> -->
+		 <includes>
+		  <include>**/*.class</include>
 		  
-<!-- 		 </includes> -->
-		 <groups>org.mybatis.jpetstore.selenium.RegressionTests</groups>
+		 </includes>
+		 
 	     <groups>org.mybatis.jpetstore.selenium.release</groups>
 		</configuration>
 		</plugin>
