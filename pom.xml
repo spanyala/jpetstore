@@ -245,24 +245,7 @@
 
 	<profile>
 		<id>release</id>
-		 <build>
-            <plugins>
-              <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
-                <configuration>
-                    <excludes>
-                        <exclude>org.mybatis.jpetstore.selenium.RegressionTests</exclude>
-                    </excludes>
-                    <includes>
-                        <!-- Include your Cucumber tests, as an example -->
-                        <include>org.mybatis.jpetstore.selenium.release</include>
-                    </includes>
-                </configuration>
-              </plugin>
-            </plugins>
-          </build>
+		 
 		<properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
 		</properties>
