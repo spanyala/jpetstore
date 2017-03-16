@@ -226,8 +226,9 @@
 		<configuration>
 		 <includes>
 		  <include>**/*.class</include>
-		 </includes> 
-		     <excludedGroups>org.mybatis.jpetstore.selenium.release</excludedGroups>
+		 </includes>
+		 <groups>${testcase.groups}</groups>
+	   
 		</configuration>
 		</plugin>
         
@@ -249,18 +250,18 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.19.1</version>              
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>2.11</version>
               <configuration>
-              <groups>org.mybatis.jpetstore.selenium.release</groups>
+              <excludedGroups>org.mybatis.jpetstore.selenium.RegressionTests</excludedGroups>
              </configuration>
             </plugin>
             </plugins>
             </build>    
-            
+             
             <properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
-		</properties>
+		   </properties>
 	</profile>
 	
 </profiles>
