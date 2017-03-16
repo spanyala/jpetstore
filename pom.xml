@@ -246,22 +246,19 @@
 	<profile>
 		<id>release</id>
 	<build>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>2.11</version>
-			<dependencies>
-				<dependency>
-					<groupId>org.apache.maven.surefire</groupId>
-					<artifactId>surefire-junit47</artifactId>
-					<version>2.17</version>
-				</dependency>
-			</dependencies>	
-					
-		</plugin>
-	</plugins>
-</build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+        <configuration>
+          <excludes>
+            <exclude>**/RegressionTests.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 		<properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
 		</properties>
