@@ -191,7 +191,7 @@
            </configuration>
         </plugin>
 
-         <plugin> 
+      <!--    <plugin> 
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.5.5.201112152213</version>
@@ -209,7 +209,7 @@
                     </goals>
                 </execution>
             </executions>
-        </plugin>
+        </plugin> -->
 			
 			
 	<plugin>
@@ -238,7 +238,6 @@
 <profiles>
 	<profile>
 		<id>Regression</id>
-
 		<properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.RegressionTests</testcase.groups>
 		</properties>
@@ -246,18 +245,6 @@
 
 	<profile>
 		<id>release</id>
-		<build>
-			<finalName>jpetstore</finalName>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.11</version>
-
-				</plugin>
-
-			</plugins>
-		</build>
 		<properties>
 			<testcase.groups>org.mybatis.jpetstore.selenium.release</testcase.groups>
 		</properties>
