@@ -224,7 +224,6 @@
 		 </dependency>
 		</dependencies>
 		<configuration>
-		 <groups>org.mybatis.jpetstore.selenium.RegressionTests</groups>
 	     <groups>org.mybatis.jpetstore.selenium.release</groups>
 		</configuration>
 		</plugin>
