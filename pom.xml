@@ -265,6 +265,10 @@
                         </goals>
                     </execution>
                 </executions>
+                
+                <configuration>
+              <groups>org.mybatis.jpetstore.selenium.release</groups>
+             </configuration>
             </plugin>
             </plugins>
             </build>
