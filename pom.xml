@@ -224,12 +224,10 @@
 		 </dependency>
 		</dependencies>
 		<configuration>
-		<!-- 		 <includes> -->
-<!-- 		  <include>**/*.class</include> -->
-<!-- 		 </includes> -->
-	    <includes> 
-		<include>**/*CounterTest.class</include>
-	    </includes>
+		 <includes> 
+		  <include>**/*.class</include> 
+ 		 </includes> 
+	    
 	   
 		</configuration>
 		</plugin>
