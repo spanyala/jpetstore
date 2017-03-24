@@ -228,7 +228,7 @@
 <!-- 		  <include>**/*.class</include> -->
 <!-- 		 </includes> -->
 	    <includes> 
-		<include>**/*Test.class</include>
+		<include>**/*CounterTest.class</include>
 	    </includes>
 	   
 		</configuration>
