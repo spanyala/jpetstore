@@ -224,10 +224,12 @@
 		 </dependency>
 		</dependencies>
 		<configuration>
-		 <includes>
-		  <include>**/*.class</include>
-		 </includes>
-		
+		<!-- 		 <includes> -->
+<!-- 		  <include>**/*.class</include> -->
+<!-- 		 </includes> -->
+	    <includes> 
+		<include>**/*Test.class</include>
+	    </includes>
 	   
 		</configuration>
 		</plugin>
