@@ -227,8 +227,6 @@
 		 <includes> 
 		  <include>**/*.class</include> 
  		 </includes> 
-	    
-	   
 		</configuration>
 		</plugin>
         
@@ -247,6 +245,8 @@
 		        <version>2.11</version>
               <configuration>
               <excludedGroups>org.mybatis.jpetstore.selenium.release</excludedGroups>
+              <excludedGroups>org.mybatis.jpetstore.selenium.UnitTest</excludedGroups>
+              
              </configuration>
             </plugin>
             </plugins>
@@ -266,6 +266,8 @@
 		        <version>2.11</version>
               <configuration>
               <excludedGroups>org.mybatis.jpetstore.selenium.RegressionTests</excludedGroups>
+              <excludedGroups>org.mybatis.jpetstore.selenium.UnitTest</excludedGroups>
+              
              </configuration>
             </plugin>
             </plugins>
@@ -276,6 +278,27 @@
 		   </properties>
 	</profile>
 	
+	<profile>
+		<id>unitTest</id>
+		<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>2.11</version>
+              <configuration>
+              <excludedGroups>org.mybatis.jpetstore.selenium.RegressionTests</excludedGroups>
+              <excludedGroups>org.mybatis.jpetstore.selenium.release</excludedGroups>
+              
+             </configuration>
+            </plugin>
+            </plugins>
+            </build>    
+             
+            <properties>
+			<testcase.groups>org.mybatis.jpetstore.selenium.UnitTest</testcase.groups>
+		   </properties>
+	</profile>
 </profiles>
 	
 	</project>
