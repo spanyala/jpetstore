@@ -28,8 +28,16 @@ public class VerifyProductChrome {
   @Before
   public void setUp() throws Exception {
  
+    System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
+    
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--start-maximized");
+
+    Map<String, Object> prefs = new HashMap<String, Object>();
+    prefs.put("credentials_enable_service", false);
+    prefs.put("profile.password_manager_enabled", false);
+    options.setExperimentalOption("prefs", prefs);
 	  
-	  System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().window().maximize();
     baseUrl = System.getenv("JSTOREURL");
