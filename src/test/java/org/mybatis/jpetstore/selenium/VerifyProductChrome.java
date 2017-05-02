@@ -3,6 +3,7 @@ package org.mybatis.jpetstore.selenium;
 
 import java.io.File;
 import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
