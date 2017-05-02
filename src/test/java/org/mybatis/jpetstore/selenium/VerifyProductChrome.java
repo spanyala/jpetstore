@@ -41,8 +41,8 @@ public class VerifyProductChrome {
     prefs.put("profile.password_manager_enabled", false);
     options.setExperimentalOption("prefs", prefs);
 	  
-    driver = new ChromeDriver();
-    driver.manage().window().maximize();
+    driver = new ChromeDriver(options);
+    # driver.manage().window().maximize();
     baseUrl = System.getenv("JSTOREURL");
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
