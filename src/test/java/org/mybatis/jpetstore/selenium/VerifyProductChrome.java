@@ -35,9 +35,9 @@ public class VerifyProductChrome {
     
     ChromeOptions options = new ChromeOptions();
 //    options.addArguments("--start-maximized");
-    options.AddArguments("chrome.switches", "--disable-extensions --disable-extensions-file-access-check --disable-extensions-http-throttling --disable-infobars --enable-automation --start-maximized");
-    options.AddUserProfilePreference("credentials_enable_service", false);
-    options.AddUserProfilePreference("profile.password_manager_enabled", false);
+    options.addArguments("chrome.switches", "--disable-extensions --disable-extensions-file-access-check --disable-extensions-http-throttling --disable-infobars --enable-automation --start-maximized");
+    options.addUserProfilePreference("credentials_enable_service", false);
+    options.addUserProfilePreference("profile.password_manager_enabled", false);
 
 //    Map prefs = new HashMap();
 //    prefs.put("credentials_enable_service", false);
