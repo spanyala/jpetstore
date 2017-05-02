@@ -34,7 +34,7 @@ public class VerifyProductChrome {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--start-maximized");
 
-    Map<String, Object> prefs = new HashMap<String, Object>();
+    Map prefs = new HashMap();
     prefs.put("credentials_enable_service", false);
     prefs.put("profile.password_manager_enabled", false);
     options.setExperimentalOption("prefs", prefs);
