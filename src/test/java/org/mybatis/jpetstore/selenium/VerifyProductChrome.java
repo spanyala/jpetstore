@@ -34,12 +34,15 @@ public class VerifyProductChrome {
     System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
     
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--start-maximized");
+//    options.addArguments("--start-maximized");
+    options.AddArguments("chrome.switches", "--disable-extensions --disable-extensions-file-access-check --disable-extensions-http-throttling --disable-infobars --enable-automation --start-maximized");
+    options.AddUserProfilePreference("credentials_enable_service", false);
+    options.AddUserProfilePreference("profile.password_manager_enabled", false);
 
-    Map prefs = new HashMap();
-    prefs.put("credentials_enable_service", false);
-    prefs.put("profile.password_manager_enabled", false);
-    options.setExperimentalOption("prefs", prefs);
+//    Map prefs = new HashMap();
+//    prefs.put("credentials_enable_service", false);
+//    prefs.put("profile.password_manager_enabled", false);
+//    options.setExperimentalOption("prefs", prefs);
 	  
     driver = new ChromeDriver(options);
 //   driver.manage().window().maximize();
