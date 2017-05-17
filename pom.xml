@@ -13,14 +13,14 @@
 	           
 	<repository>
 		<id>central</id>
-		<url>http://artifactory.salientcrgt-devops.com/artifactory/repo</url>
+		<url>http://artifactory.salientcrgt-devops.com/artifactory/remote-repos</url>
 		<snapshots>
 			<enabled>false</enabled>
 		</snapshots>
 	</repository>
 	<repository>
 		<id>snapshots</id>
-		<url>http://artifactory.salientcrgt-devops.com/artifactory/repo</url>
+		<url>http://artifactory.salientcrgt-devops.com/artifactory/remote-repos</url>
 		<releases>
 			<enabled>false</enabled>
 		</releases>
@@ -29,14 +29,14 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
-			<url>http://artifactory.salientcrgt-devops.com/artifactory/repo</url>
+			<url>http://artifactory.salientcrgt-devops.com/artifactory/remote-repos</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
 			<id>snapshots</id>
-			<url>http://artifactory.salientcrgt-devops.com/artifactory/repo</url>
+			<url>http://artifactory.salientcrgt-devops.com/artifactory/remote-repos</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
