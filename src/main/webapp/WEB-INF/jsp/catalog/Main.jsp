@@ -71,7 +71,7 @@ Exotic Varieties</div>
 <div id="Separator">&nbsp;</div>
 </div>
 
-Version 1.095
+Version 1.096
 
 <%@ include file="../common/IncludeBottom.jsp"%>
 
