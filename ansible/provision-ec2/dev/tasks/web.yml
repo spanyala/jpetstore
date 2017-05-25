@@ -11,7 +11,7 @@
     count: 1
     instance_tags:
        Name: web-jpetstore
-    register: web-instance
+  register: web-instance
 
 
 
