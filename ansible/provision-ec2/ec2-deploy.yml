@@ -1,0 +1,17 @@
+---
+ - hosts: localhost
+   connection: local
+   gather_facts: no
+   vars_files:
+     - "{{ env }}/vars/web.yml"
+   tasks:
+     - include: "{{ env }}/tasks/web.yml"
+
+- name: Deploy Web application
+   hosts: web-instance
+   gather_facts: true
+   user: ec2-user
+   sudo: yes
+   tasks:
+     - name: Docker image run
+       command: docker run -d -p 8080:8080 --name webap salientcrgt/jpetstore:25
