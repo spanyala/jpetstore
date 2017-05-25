@@ -13,10 +13,5 @@
        Name: web-jpetstore
     register: web-instance
 
-- name: WebServer | Wait for SSH to come up
-  local_action: 
-    module: wait_for 
-    host: web-instance
-    port: 22 
-    state: started
+
 
