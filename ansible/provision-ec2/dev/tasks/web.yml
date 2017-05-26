@@ -15,7 +15,7 @@
 
 - name: Set the Instances facts
   set_fact:
-    instance_ip: "{{ ec2.instances[0].private_ip }}"
+    instance_ip: "{{ ec2.instances[0].public_ip }}"
 
 - name: WebServer | Wait for SSH to come up
   local_action: 
@@ -29,6 +29,6 @@
   register: task_result
   until: task_result.rc == 0
   retries: 10
-  delay: 1
+  delay: 2
   ignore_errors: yes
 
