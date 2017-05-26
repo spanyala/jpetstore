@@ -1,0 +1,6 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: deploy container
+      command: ssh -oStrictHostKeyChecking=no -i ~/salient-base-ami.pem ec2-user@52.23.173.166 pwd
