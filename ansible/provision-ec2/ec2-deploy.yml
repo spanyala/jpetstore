@@ -1,8 +1,9 @@
 ---
- - hosts: localhost
-   connection: local
-   gather_facts: no
-   vars_files:
-     - "{{ env }}/vars/web.yml"
-   tasks:
-     - include: "{{ env }}/tasks/web.yml"
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files:
+    - "{{ env }}/vars/web.yml"
+  tasks:
+    - include: "{{ env }}/tasks/web.yml"
+
