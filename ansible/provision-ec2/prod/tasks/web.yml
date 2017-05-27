@@ -1,16 +1,16 @@
 ---
 - name: Provision of Web instance
   ec2:
-    instance_type: t2.micro
-    keypair: 'salient-base-ami'
+    instance_type: "{{ instance_type }}"
+    keypair: "{{ keypair }}"
     group: "{{ sg_group }}"
-    ec2_region: 'us-east-1'
-    image: "ami-b55013a3"
+    ec2_region: "{{ ec2_region }}"
+    image: "{{ image }}"
     wait: true
-    vpc_subnet_id: subnet-cd2a1ae6
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
     count: 1
     instance_tags:
-       Name: jpdocker-{{ env }}
+       Name: "{{ tag_name }}"
   register: ec2
 
 - name: Set the Instances facts

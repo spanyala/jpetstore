@@ -1,2 +1,8 @@
 ---
- sg_group: devopsall
+  sg_group: devopsall
+  instance_type: t2.micro
+  keypair: salient-base-ami
+  ec2_region: us-east-1
+  image: ami-b55013a3
+  vpc_subnet_id: subnet-cd2a1ae6
+  tag_name: "jpdocker-{{ env }}"
