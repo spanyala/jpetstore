@@ -1,0 +1,9 @@
+- name: Save file with information for dns creation
+  blockinfile:
+    path: dns_prefix.conf
+    create: yes
+    block: |
+      DNS_PREFIX={{ tag_name }}
+      DNS_PORT=80
+      INTERNAL_IP={{ instance_ip }}
+      INTERNAL_PORT=8080

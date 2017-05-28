@@ -1,0 +1,17 @@
+- name: Provision of Web instance
+  ec2:
+    instance_type: "{{ instance_type }}"
+    keypair: "{{ keypair }}"
+    group: "{{ sg_group }}"
+    ec2_region: "{{ ec2_region }}"
+    image: "{{ image }}"
+    wait: true
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    count: "{{ number_instances }}"
+    instance_tags:
+       Name: "{{ tag_name }}"
+  register: ec2
+
+- name: Set the Instances facts
+  set_fact:
+    instance_ip: "{{ ec2.instances[0].private_ip }}"

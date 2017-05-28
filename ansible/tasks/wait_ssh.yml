@@ -1,0 +1,6 @@
+- name: WebServer | Wait for SSH to come up
+  local_action: 
+    module: wait_for 
+    host: "{{ instance_ip }}" 
+    port: 22 
+    state: started

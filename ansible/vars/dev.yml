@@ -6,3 +6,4 @@
   image: ami-b55013a3
   vpc_subnet_id: subnet-cd2a1ae6
   tag_name: "jpdocker-{{ env }}"
+  number_instances: 1
