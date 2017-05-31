@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files:
+    - "vars/{{ env }}.yml"
+  tasks:
+    - include: "tasks/search_ec2_instances.yml"
+    - include: "tasks/deploy_docker_provisioned_ec2.yml"
+
+
+

@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files:
+    - "vars/{{ env }}.yml"
+  tasks:
+    - include: "tasks/search_ec2_instances.yml"
+    - include: "tasks/create_ec2_instance.yml"
+    - include: "tasks/wait_ssh.yml"
+    - include: "tasks/save_dns_information.yml"
+    - include: "tasks/terminate_ec2_instances.yml"
+
+
+

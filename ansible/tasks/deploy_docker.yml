@@ -1,4 +1,4 @@
-- name: deploy container
+- name: Deploy container
   command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ instance_ip }} sudo docker run -d -p 8080:8080 salientcrgt/jpetstore:{{ build }}
   register: task_result
   until: task_result.rc == 0
