@@ -1,5 +1,14 @@
+- name: Stop container
+  command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ item.private_ip_address }} sudo docker stop $(docker ps -aq)
+  register: stop_task_result
+  until: stop_task_result.rc == 0
+  retries: 10
+  delay: 2
+  ignore_errors: yes
+  with_items: "{{ ec2_facts.instances }}"
+
 - name: Deploy container
-  command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ item.private_ip_address }} sudo docker run -d -p 8080:8080 salientcrgt/jpetstore:{{ build }}
+  command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ item.private_ip_address }} sudo docker run -d --rm -p 8080:8080 salientcrgt/jpetstore:{{ build }}
   register: task_result
   until: task_result.rc == 0
   retries: 10
