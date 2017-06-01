@@ -1,5 +1,5 @@
 - name: Stop container
-  command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ item.private_ip_address }} sudo docker stop $(docker ps -aq)
+  command: ssh -oStrictHostKeyChecking=no -i "~/salient-base-ami.pem" ec2-user@{{ item.private_ip_address }} sudo docker stop $(sudo docker ps -aq)
   register: stop_task_result
   until: stop_task_result.rc == 0
   retries: 10
