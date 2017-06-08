@@ -1,6 +1,6 @@
 - name: Save file with information for dns creation
   blockinfile:
-    path: dns_prefix.conf
+    path: dns_prefix_{{ env }}.conf
     create: yes
     block: |
       DNS_PREFIX={{ tag_name }}
