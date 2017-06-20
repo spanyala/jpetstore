@@ -19,7 +19,7 @@
 - name: Wait untils the web app is available
   shell: curl --head --silent http://{{ item.private_ip_address }}:8080/jpetstore/actions/Catalog.action
   register: result
-  until: result.stdout.find("200 OK") != -1
+  until: result.stdout.find("HTTP/1.1 200 ") != -1
   retries: 25
   delay: 5
   with_items: "{{ ec2_facts.instances }}"
