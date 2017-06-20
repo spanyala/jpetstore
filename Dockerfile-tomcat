@@ -1,4 +1,4 @@
-FROM tomcat:alpine
+FROM tomcat:8.5-alpine
 
 MAINTAINER Rafael Troncoso<rafael.troncoso@salientcrgt.com>
 
